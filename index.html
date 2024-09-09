@@ -3,85 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pendulum Project - Understanding Pendulum Period</title>
-    <link rel="stylesheet" href="/pendulum/style.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#background">Background</a></li>
-            <li><a href="#experiment">Your Experiment</a></li>
-            <li><a href="#inaction">In Action</a></li>
-            <li><a href="#data">Data</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
-    </nav>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    <!-- Home Section -->
-    <section class="section" id="home">
-        <h1>Your Name</h1>
-        <h2>Project: Understanding Pendulum Period</h2>
-        <p>AP Physics C - Mechanics</p>
-        <p>Teacher: [Teacher Name]</p>
-    </section>
+        .container {
+            height: 100vh;
+            scroll-snap-type: y mandatory; /* Enables vertical scroll snapping */
+            overflow-y: scroll;
+        }
 
-    <!-- Background Information Section -->
-    <section class="section" id="background">
-        <h1>Background Information</h1>
-        <p>Why did you select this experiment?</p>
-        <p>What did you find interesting?</p>
-        <p>How does it relate to other topics?</p>
-    </section>
+        section {
+            scroll-snap-align: start;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    <!-- Your Experiment Section -->
-    <section class="section" id="experiment">
-        <h1>Your Experiment</h1>
-        <h2>Describe Your Lab</h2>
-        <p>Predictions</p>
-        <p>Procedure</p>
-        <p>Materials required</p>
-    </section>
-
-    <!-- In Action Section -->
-    <section class="section" id="inaction">
-        <h1>In Action</h1>
-        <p>Images of your project</p>
-        <p>Comments about facilitating the experiment</p>
-    </section>
-
-    <!-- Data Section -->
-    <section class="section" id="data">
-        <h1>Data</h1>
-        <p>Discuss the data you collected</p>
-        <p>Variables tested</p>
-        <ul>
-            <li>Dependent</li>
-            <li>Independent</li>
-            <li>Control</li>
-        </ul>
-        <p>Results and analysis</p>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section" id="results">
-        <h1>Results</h1>
-        <p>Trends found</p>
-        <p>Surprising data</p>
-        <p>Comparison against your hypothesis</p>
-    </section>
-
-    <!-- Conclusion Section -->
-    <section class="section" id="conclusion">
-        <h1>Conclusion</h1>
-        <p>Summarize your findings</p>
-        <p>Discuss real-life applications and importance</p>
-        <p>Any errors or abnormal data points</p>
-        <p>Source of error</p>
-    </section>
-
-    <script src="/pendulum/script.js"></script>
-</body>
-</html>
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333
