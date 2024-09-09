@@ -1,3 +1,4 @@
+console.log("JavaScript is working!");
 // Select all sections
 const sections = document.querySelectorAll('.section');
 
