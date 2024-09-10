@@ -4,7 +4,7 @@
   }
   
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #333;
     color: #fff;
     height: 100vh;
@@ -28,7 +28,7 @@
   .navbar {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     width: 100%;
     height: 60px;
@@ -73,21 +73,164 @@
   section h1 {
     font-size: 4rem;
   }
-  
-  /* Section Images */
+  section h3 {
+    text-align:justify;
+    padding-left:5%;
+    padding-right:5%;
+  }
+/* Specific styles for sections */
+
   section#home {
-    background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;;
+    background: url('photo1.png') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
   }
   
-  section#about {
-    background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;;
+  section#background {
+    background: url('photo3.jpg') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+ 
+  section#experiment {
+    background: url('') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+ 
+  section#inaction {
+    background: url('photo2.jpg') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+ 
+  section#data {
+    background: url('.jpeg') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+ 
+  section#results {
+    background: url('photo3.jpeg') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+ 
+  section#conclusion {
+    background: url('.jpg') no-repeat center center/cover;
+    color: white; 
+    text-align: center; 
+    height: 100vh; 
+  }
+
+  section#home::before,
+  section#background::before,
+  section#experiment::before,
+  section#inaction::before,
+  section#data::before,
+  section#results::before,
+  section#conclusion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Reduced transparency */
+    z-index: 1; /* Overlay behind text but above the background image */
+    pointer-events: none; /* Ensure it doesn't block interaction */
   }
   
-  section#service {
-    background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
+  /* Ensure text in each section is above the overlay */
+  section * {
+    position: relative;
+    z-index: 2; /* Text above the overlay */
   }
-  
-  section#contact {
-    background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
-  }
-  
+
+  .experiment-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text-column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+.inaction-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+}
+
+.column img {
+    max-width: 100%;
+    max-height: 400px; /* Limits the height */
+    height: auto;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+.data-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.data-column {
+  flex: 1;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: left; /* Aligns text and bullet points to the left */
+}
+
+ul {
+  padding-left: 20px; /* Adds space between bullets and text */
+}
+
+.data-image {
+  flex: 1.6;
+  justify-content: center;
+}
+
+.data-image img {
+  max-width: 100%; /* Limits image width to the container's width */
+  max-height: 1000px; /* Sets a maximum height */
+  height: auto; /* Ensures the aspect ratio is maintained */
+  object-fit: contain; /* Ensures the image fits within the container */
+}
