@@ -70,6 +70,14 @@
     scroll-snap-align: center;
   }
   
+  section p {
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center align */
+    text-align: center; /* Optional, for centering text inside */
+  
+  }
+
   section h1 {
     font-size: 4rem;
   }
@@ -78,13 +86,14 @@
     padding-left:5%;
     padding-right:5%;
   }
-/* Specific styles for sections */
+/* adding backgrounds to each sections */
 
   section#home {
     background: url('photo1.png') no-repeat center center/cover;
     color: white; 
     text-align: center; 
     height: 100vh; 
+    
   }
   
   section#background {
@@ -95,7 +104,7 @@
   }
  
   section#experiment {
-    background: url('') no-repeat center center/cover;
+    background: url('photo6.png') no-repeat center center/cover;
     color: white; 
     text-align: center; 
     height: 100vh; 
@@ -109,10 +118,12 @@
   }
  
   section#data {
-    background: url('.jpeg') no-repeat center center/cover;
+    background: url('photo4.jpg') no-repeat center center/cover;
     color: white; 
     text-align: center; 
-    height: 100vh; 
+    height: 100vh;
+    font-weight: 900;
+    font-size: 1.5rem;
   }
  
   section#results {
@@ -120,13 +131,17 @@
     color: white; 
     text-align: center; 
     height: 100vh; 
+    font-weight: 900;
+    font-size: 1.5rem;
+
   }
  
   section#conclusion {
-    background: url('.jpg') no-repeat center center/cover;
+    background: url('photo5.jpg') no-repeat center center/cover;
     color: white; 
-    text-align: center; 
+    text-align: left; 
     height: 100vh; 
+    font-size: 1.3rem;
   }
 
   section#home::before,
@@ -202,6 +217,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-left: 50px;
 }
 
 .image-column {
@@ -214,7 +230,7 @@
 
 .data-column {
   flex: 1;
-  padding: 5px;
+  font-size:1.15rem;
   box-sizing: border-box;
   text-align: left; /* Aligns text and bullet points to the left */
 }
